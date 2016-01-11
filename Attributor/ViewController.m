@@ -7,14 +7,24 @@
 //
 
 #import "ViewController.h"
+#import "TextStatsViewController.h"
 
 @interface ViewController ()
 @property (strong, nonatomic) IBOutlet UITextView *bodyText;
 @property (strong, nonatomic) IBOutlet UILabel *headLineLabel;
+@property (strong, nonatomic) IBOutlet UIButton *outlineButton;
 
 @end
 
 @implementation ViewController
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"AnalizeText"]) {
+        if ([segue.destinationViewController isKindOfClass:[TextStatsViewController class]]) {
+            TextStatsViewController *tsvc = (TextStatsViewController *)segue.destinationViewController;
+            tsvc.textToAnalize= self.bodyText;
+        }
+    }
+}
 - (IBAction)changeBodySelectedColorToMatchBackgroundOfBotton:(UIButton *)sender {
     [self.bodyText.textStorage addAttribute:NSForegroundColorAttributeName
                                       value:sender.backgroundColor
@@ -30,10 +40,30 @@
     [self.bodyText.textStorage removeAttribute:NSStrokeWidthAttributeName range:self.bodyText.selectedRange];
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    NSLog(@"hello, world!!");
-    // Do any additional setup after loading the view, typically from a nib.
+
+-(void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self usePreferredFonts];
+    [[NSNotificationCenter defaultCenter]addObserver:self
+                                            selector:@selector(PreferredFontsChanged:)
+                                                 name:UIContentSizeCategoryDidChangeNotification object:nil];
+}
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [[NSNotificationCenter defaultCenter]removeObserver:self
+                                                name:UIContentSizeCategoryDidChangeNotification
+                                                 object:nil];
+}
+-(void)PreferredFontsChanged: (NSNotification*)notification{
+    
+    [self usePreferredFonts];
+    
+}
+-(void)usePreferredFonts{
+    self.bodyText.font= [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+    self.headLineLabel.font=[UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
+    
+
 }
 
 

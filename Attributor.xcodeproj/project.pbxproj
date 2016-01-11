@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		883025C71C4454B8005ADB35 /* TextStatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 883025C61C4454B8005ADB35 /* TextStatsViewController.m */; };
 		884C13001C4052B40034EEBF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 884C12FF1C4052B40034EEBF /* main.m */; };
 		884C13031C4052B40034EEBF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 884C13021C4052B40034EEBF /* AppDelegate.m */; };
 		884C13061C4052B40034EEBF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 884C13051C4052B40034EEBF /* ViewController.m */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		883025C51C4454B8005ADB35 /* TextStatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextStatsViewController.h; sourceTree = "<group>"; };
+		883025C61C4454B8005ADB35 /* TextStatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextStatsViewController.m; sourceTree = "<group>"; };
 		884C12FB1C4052B40034EEBF /* Attributor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Attributor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		884C12FF1C4052B40034EEBF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		884C13011C4052B40034EEBF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -106,6 +109,8 @@
 				884C13041C4052B40034EEBF /* ViewController.h */,
 				884C13051C4052B40034EEBF /* ViewController.m */,
 				884C13071C4052B40034EEBF /* Main.storyboard */,
+				883025C51C4454B8005ADB35 /* TextStatsViewController.h */,
+				883025C61C4454B8005ADB35 /* TextStatsViewController.m */,
 				884C130A1C4052B40034EEBF /* Assets.xcassets */,
 				884C130C1C4052B40034EEBF /* LaunchScreen.storyboard */,
 				884C130F1C4052B40034EEBF /* Info.plist */,
@@ -273,6 +278,7 @@
 				884C13061C4052B40034EEBF /* ViewController.m in Sources */,
 				884C13031C4052B40034EEBF /* AppDelegate.m in Sources */,
 				884C13001C4052B40034EEBF /* main.m in Sources */,
+				883025C71C4454B8005ADB35 /* TextStatsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +504,7 @@
 				884C132A1C4052B40034EEBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		884C132B1C4052B40034EEBF /* Build configuration list for PBXNativeTarget "AttributorTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +513,7 @@
 				884C132D1C4052B40034EEBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		884C132E1C4052B40034EEBF /* Build configuration list for PBXNativeTarget "AttributorUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +522,7 @@
 				884C13301C4052B40034EEBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
